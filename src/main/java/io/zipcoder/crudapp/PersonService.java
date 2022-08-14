@@ -24,9 +24,9 @@ public class PersonService {
     }
 
     public List<Person> findAll(){
-        Iterator<Person> allPerson= (Iterator<Person>) repository.findAll();
+        Iterable <Person> allPerson= repository.findAll();
         List<Person> personList = new ArrayList<>();
-        allPerson.forEachRemaining(personList::add);
+        allPerson.forEach(personList::add);
         return personList;
     }
 

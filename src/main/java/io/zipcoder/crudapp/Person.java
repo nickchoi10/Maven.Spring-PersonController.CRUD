@@ -17,10 +17,14 @@ public class Person {
 
     public Person(){}
 
-    public Person (String firstName, String lastName, Long id){
+    public Person (String firstName, String lastName){
         this.firstName=firstName;
         this.lastName=lastName;
-        this.id=id;
+    }
+    public Person (Long id, String firstName, String lastName){
+        this.firstName=firstName;
+        this.lastName=lastName;
+        this.id =id;
     }
 
     public String getFirstName() {
@@ -39,11 +43,18 @@ public class Person {
         this.lastName = lastName;
     }
 
-    public long getId() {
-        return id;
-    }
+//    public long getId() {
+//        return id;
+//    }
+//
+//    public void setId(Long id) {
+//        this.id = id;
+//    }
 
-    public void setId(Long id) {
-        this.id = id;
+    public String toString(){
+        return "Person{" + "id=" +id +
+            ", firstName=" +firstName + "\'" +
+            ", lastName=" +lastName + "\'" +
+            "}";
     }
 }
