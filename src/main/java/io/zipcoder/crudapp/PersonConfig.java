@@ -13,7 +13,12 @@ public class PersonConfig {
 
     @PostConstruct
     public void setup(){
-        service.create(new Person());
-        service.create(new Person());
+        service.create(new Person(1L,"nick", "choi"));
+        service.create(new Person(2L,"christy", "choi"));
+        service.create(new Person(3L,"nogi", "choi"));
+        service.create(new Person(4L,"young", "choi"));
+        service.create(new Person(5L,"mi", "choi"));
+        service.create(new Person(6L,"jessica", "choi"));
+        service.create(new Person(7L,"jesse", "choi"));
     }
 }
